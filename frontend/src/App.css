@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: right; 
+  min-height: 100vh;
+}
+.Login_page{
+  background-color:rgb(207, 207, 207);
+  background-image: url(car_login.png);
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: 30%;
+  background-position: 250px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-left:800px ; 
+}
+.register{
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color:blue;
+  text-decoration: underline;
+  margin-top: 40px;
+  margin-left: 1px; 
+}
+.info_label{
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5px; 
+  font-size: 20px;
+} 
+label{
+  text-align: left;
+  font-size: 15px;
+}
+input{
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width:200px;
+  height:25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 50px;
+}
+.input_person{
+  background-image: url(person_icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.input_email{
+  background-image: url(email_icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.input_password{
+  background-image: url(password_icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.promt1{
+  margin-left: 45.5px;
+}
+.promt2{
+  margin-left: 75.5px;;
+}
+.submit_login{
+  text-align: center;
+  padding-top: 0.45rem;
+  margin-top: 0px;
+  margin-left: 37.5px; 
+  width:225px;
+  height:30px;
+  background-color: rgb(11, 110, 240);
+  color:rgb(255, 255, 255)
+}
+.registration_page{
+  background: linear-gradient(165deg, rgba(45, 135, 252, 0.911) 60%, #bbbbbb 60%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registration_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.info_label2{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 20px;
+} 
+
+.cards{
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
