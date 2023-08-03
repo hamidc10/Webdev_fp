@@ -34,13 +34,16 @@ export const Userlogin = (props) =>{
             body: JSON.stringify(data),
         })
         .then((response)=>{
-            response.text()
-        })
-        .then((data) => {
-            console.log('Success:', data);
-            setEmail('');
-            setPassword('');
-            window.location='/main'
+            response.json().then(function(result){
+                console.log("json?",result);
+                if(result["valid_login"] === 1){
+                    setEmail('');
+                    setPassword('');
+                    window.location='/main'
+                }
+            }
+            )
+            
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -50,7 +53,7 @@ export const Userlogin = (props) =>{
     return(
     <>
         <div class="Login_page">
-            <form class="login_form" onSubmit={handleSubmit}>
+            <form class="login_form" onSubmit={handleSubmit} method="POST">
                 <label class="info_label">Email</label>
                 <input class="input_email" type='email' onChange={(e)=>setEmail(e.target.value)} value={email} />
                 <label class="info_label">Password</label>
