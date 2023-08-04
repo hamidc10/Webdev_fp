@@ -106,11 +106,466 @@ input{
   font-size: 20px;
 } 
 
-.cards{
-  background-color: aqua;
+.Add_cars{
+  width: 100%;
+  height: 100%;
+
+}
+/* For button to add https://codepen.io/LukeRFP/pen/XMbeRL */
+.Add_button{
+  display: flex;
+  position: fixed;
+  align-items: left; 
+  margin-top: 20px;
+  margin-left: 20px; 
+  width: 35px;
+  height: 35px;
+  background: f1f1f1;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #0077ff;
+}
+.Add_button:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #0077ff;
+  top: 50%;
+  left: 50%;
+}
+
+.Add_button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0077ff;
+  height: 50%;
+  width: 4px;
+}
+
+.Add_button:hover:before,
+.Add_button:hover:after {
+  background: #ffffff;
+ 
+  transition: 0.2s;
+}
+
+.Add_button:hover {
+  background-color: #0077ff;
+  transition: 0.2s;
+}
+.Car_info{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height:  100%;
+  background-color: #f1f1f1;
+  background-size: cover;
+}
+.Car_form{
+  margin-top: -200px;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: left; */
+}
+.car_label{
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5px; 
+  font-size: 20px;
+} 
+
+.car_input1{
+  background-image: url(car_make.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width:175px;
+  height:25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 50px;
+}
+.car_input2{
+  background-image: url(car_model.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width:175px;
+  height:25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 50px;
+}
+.car_input3{
+  background-image: url(year.png);
+  background-size: 25px;
+  background-repeat: no-repeat; 
+  background-position: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width:175px;
+  height:25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 50px;
+}
+.car_input4{
+  background-image: url(odometer.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width:175px;
+  height:25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 50px;
+}
+.submit_car{
+  text-align: center;
+  padding-top: 0.2rem;
+  margin-top: 0px;
+  margin-left: 3.5px; 
+  width:100px;
+  height:30px;
+  background-color: #0077ff;
+  color:#ffffff;
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: rgb(0, 119, 255);
+}
+.submit_car:hover{
+  background-color: #bbb9b9;
+  border-color: #bbb9b9;
+  color:#000000;
+}
+.submit_car:active{
+  background-color: #1aaf1a;
+  border-color: #1aaf1a;
+  color:#ffffff;
+}
+.cancel_car{
+  text-align: center;
+  padding-top: 0rem;
+  margin-top: 0px;
+  margin-left:20px;
+  width:100px;
+  height:30px;
+  color:#ffffff;
+  background-color: red;
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: red;
+}
+.cancel_car:hover{
+  background-color: #918f8f;
+  border-color: #918f8f;
+  color:#000000;
+}
+.cancel_car:active{
+  background-color: #e93232;
+  border-color: #e93232;
+  color:#ffffff;
+}
+.card_setup{
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 300px);
+  grid-gap: 10px;
+}
+.vehicle_card{
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+ 
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: -10px 30px 40px -14px rgba(0, 0, 0, 0.418);
+  background-color:#353535a8;
+
+}
+.Add_cars{
   width: 100vw;
   height: 100vh;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  background-color: #f1f1f1;
 }
+
+.Vp_button{
+  display: flex;
+  position: fixed;
+  margin-top: -20px;
+  margin-left: 180px; 
+  width: 35px;
+  height: 35px;
+  background: #35353570;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #21d609;
+}
+.Vp_button:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #21d609;
+  top: 50%;
+  left: 50%;
+}
+
+.Vp_button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #21d609;
+  height: 50%;
+  width: 4px;
+}
+
+.Vp_button:hover:before,
+.Vp_button:hover:after {
+  background: #353525;
+ 
+  transition: 0.2s;
+}
+
+.Vp_button:hover {
+  background-color: #21d609;
+  transition: 0.2s;
+}
+
+.delete_car{
+  text-align: center;
+  font-size: 10px;
+  padding-top: 0rem;
+  margin-top: 10px;
+  width:80px;
+  height:30px;
+  color:#ffffff;
+  background-color: rgba(255, 0, 0, 0.452);
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: rgba(255, 0, 0, 0.062);
+}
+.delete_car:hover{
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color:#ffffff;
+}
+.delete_car:active{
+  background-color: #e93232;
+  border-color: #e9323217;
+  color:#ffffff;
+}
+.update_car{
+  text-align: center;
+  font-size: 10px;
+  padding-top: 0rem;
+  margin-left:35px;
+  width:80px;
+  height:30px;
+  color:#ffffff;
+  background-color: rgba(0, 132, 255, 0.568);
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: rgba(0, 132, 255, 0.340);
+}
+.update_car:hover{
+  background-color: #71e7a6a9;
+  border-color: #71e7a60a;
+  color:#ffffff;
+}
+.update_car:active{
+  background-color: #0066ff;
+  border-color: #0066ff;
+  color:#ffffff;
+}
+.text_plac{
+  color:rgb(0, 0, 0);
+  padding-top: 8px;
+  text-align: left;
+}
+.Vehicle_page{
+  background-color: #c4c1c1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.veh_font{
+  
+  justify-content: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color:rgb(0, 0, 0)
+}
+.veh_font p{
+  margin-left:-110px;
+  font-size: 15px;
+  
+  
+}
+.veh_font h1{
+  margin-top:-18px;
+  margin-left:110px;
+  text-align: center;
+  font-size: 15px;
+  color:rgb(0, 0, 0);
+}
+.veh_font h3{
+  margin-top:-19px;
+  margin-left:275px;
+  text-align: center;
+  font-size: 15px;
+  color:black;;
+}
+.veh_font h2{
+  
+  text-align: center;
+  font-size: 20px;
+  color:rgb(60, 69, 78);;
+}
+.veh_font h4{
+
+  text-align: center;
+  font-size: 40px;
+  color:rgb(0, 0, 0);;
+}
+.update_car2{
+  text-align: center;
+  font-size: 10px;
+  padding-top: 0.rem;
+  margin-top: 10px;
+  width:100px;
+  height:30px;
+  color:#ffffff;
+  background-color: rgba(7, 196, 32, 0.842);
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: rgba(7, 196, 32, 0.842);
+}
+.update_car2:hover{
+  background-color: #71e7a6a9;
+  border-color: #71e7a60a;
+  color:#ffffff;
+}
+.update_car2:active{
+  background-color: #09d83d;
+  border-color: #09d83d;
+  
+  color:#ffffff;
+}
+
+.discord2{
+  text-align: center;
+  font-size: 10px;
+  padding-top: 0rem;
+  margin-left:35px;
+  width:100px;
+  height:30px;
+  color:#ffffff;
+  background-color: rgba(38, 0, 253, 0.918);
+  border-radius: 20px;
+  border-width: none;
+  border-style: solid;
+  border-color: rgba(38, 0, 253, 0.918);
+}
+.discord2:hover{
+  background-color: #e05a43a9;
+  border-color: rgba(113, 231, 166, 0.048);
+  color:#ffffff;
+}
+.discord2:active{
+  background-color: #c41111;
+  border-color: #c41111;
+  color:#ffffff;
+}
+
+.return_button{
+  display: flex;
+  position: fixed;
+  margin-top: -30px;
+  margin-left: -100px; 
+  width: 35px;
+  height: 35px;
+  background: #35353500;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fc0000;
+}
+.return_button:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #fc0000;
+  top: 50%;
+  left: 50%;
+}
+
+.return_button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fc0000;
+  height: 50%;
+  width: 4px;
+}
+
+.return_button:hover:before,
+.return_button:hover:after {
+  background: #b9b7b7;
+ 
+  transition: 0.2s;
+}
+
+.return_button:hover {
+  background-color: #fc0000;
+  transition: 0.2s;
+}
+
+.text_box{
+  border-radius: 10px;
+  resize:none;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+

@@ -114,17 +114,21 @@ export const VehicleId = () => {
     }
 
     return (
-        <div id="root">
-            <button onClick={onBack}>Go Back to Vehicle Page</button>
-            <h1>Vehicle Information</h1>
-            <p><strong>Make:</strong>{make}</p>
-            <p><strong>Model:</strong>{model}</p>
-            <p><strong>Year:</strong>{year}</p>
-            <p><strong>Odometer Reading:</strong>{odometer} miles</p>
-            <span><button id="updateHistoryBtn" onClick={updateServiceHistory}>Update Service History</button><button id="NotifBtn" onClick={sendNotif}>Send Service Reminder</button></span>
+        <div id="root" class="Vehicle_page">
+            <div class="veh_font"> 
+                <button class="return_button" onClick={onBack}></button>
+                <h4>Vehicle Information</h4>
+                <p><strong>Make:</strong><h1>{make}</h1></p>
+                <p><strong>Model:</strong><h1>{model}</h1></p>
+                <p><strong>Year:</strong><h1>{year}</h1></p>
+                <p><strong>Odometer Reading:</strong><h3>{odometer} miles</h3> </p>
+                <button class="update_car2" id="updateHistoryBtn" onClick={updateServiceHistory}>Update History</button>
+                <button id="NotifBtn"class="discord2" onClick={sendNotif}>Discord Reminder</button>
+                
 
-            <h2>Service History & Notes</h2>
-            <textarea ref={textAreaRef} id="service_history" defaultValue={service_history} name="service_history" rows="4" cols="50"></textarea>
+                <h2>Service History & Notes</h2>
+            <textarea class="text_box" ref={textAreaRef} id="service_history" defaultValue={service_history} name="service_history" rows="4" cols="50"></textarea>
+            </div>
         </div>
     );
 }
