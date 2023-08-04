@@ -129,6 +129,10 @@ export const Homepage = () => {
         setShowPopUp(false);
         window.location.reload();
       };
+
+      const handleVehicleID = (vehicle_id) => {
+        window.location='/main/'+String(vehicle_id)
+      };
     
       const handleDeleteCard = (vehicle_id) => {
         const data = {
@@ -222,6 +226,7 @@ export const Homepage = () => {
                 odometer={card.odometer}
                 onDelete={handleDeleteCard}
                 onUpdate={handleEditCard}
+                onVehicle={handleVehicleID}
               />
             ))}
           </div>

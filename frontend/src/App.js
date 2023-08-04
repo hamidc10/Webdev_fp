@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Userlogin } from './Userlogin'
 import { Newuserlogin } from './Newuserlogin'
 import { Homepage } from './Homepage';
-
+import { VehicleId } from './VehicleId';
 
  //pog
 
@@ -25,9 +25,9 @@ function App() {
           <Route path="/" element={<Userlogin element={<Newuserlogin/>} />}/>
           <Route path="/registration" element={<Newuserlogin element={<Userlogin/>}/>} />
           <Route path="/main" element={<Homepage />} />
-
-      </Routes>
-    </BrowserRouter>
+          <Route path="/main/:vehicleid" element={<VehicleId />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
